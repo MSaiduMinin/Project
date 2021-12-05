@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="/wwwroot/css/bootstrap.css" rel="Stylesheet">
+    <style>
+
+            .row{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .bg-green{
+                background-color: green;
+                background-size: contain;
+            }
+            .text-white{
+                color: white;
+            }
+            
+            .img-circle{
+                border-radius: 50%;
+            }
+            .border{
+                background-color:darkorange;
+                height: 700px;
+                width: 500px;
+                border-radius: 10%;
+            }
+            .nav-color{
+                color:whitesmoke;
+                font-weight: bold;
+                font-family: Arial;
+            }
+            .nav-color:hover{
+                color:limegreen;
+            }
+            body{
+                background-image: url(/wwwroot/images/Nutritionals-scaled2.jpg);
+                background-size: cover;
+            }
+        </style>
+</head>
+<!--navbar begins-->
+<nav class="navbar navbar-expand-lg navbar-success bg-success">
+    <div class="container">
+            <img src="/wwwroot/images/A.jpg" height="80px" class="img-circle me-5">
+            <a href="index.html" class="navbar-brand nav-color  nav-color:hover">Home</a>
+        
+            <button type="button" class="navbar-toggler" data-bs-target="#myNavbar" data-bs-toggle="collapse" aria-expanded="false" aria-labelledby="myNavbar">
+                <spand class="navbar-toggler-icon"></spand>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav-item">
+                    <a href="About Us.html" class="nav-link nav-color  nav-color:hover">About Us</a>
+                </div>
+                <div class="nav-item">
+                    <a href="Team.html" class="nav-link nav-color  nav-color:hover">The Team</a>
+                </div>
+                <div class="nav-item">
+                    <a href="Our Services.html" class="nav-link nav-color  nav-color:hover">Our Services</a>
+                </div>
+                <div class="nav-item ms-auto">
+                        <a href="Contact1.html" class="nav-link nav-color  nav-color:hover">Contact Us</a>
+                </div>
+                <div class="nav-item">
+                    <a href="Register.html" class="nav-link nav-color  nav-color:hover">Register</a>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+</nav>
+<!--navbar ends-->
+<div class="row mt-5"></div>
+<body class="bg-img">
+    <div class="container border">
+    <div class="min-vh">
+        <div class="container">
+            <div class="row">
+                <form class="d-flex justify-content-center mt-5">
+                    <div class="col-md-7">
+                        <h3 class="text-center">Register</h3><br>
+                        <small class="text-mb-2">GREEN FARM LIMITED is an agritech company working with farmers to unlock agribusiness opportunities in Africa.</small>
+                        <!--your form begins here-->
+                        <div class="form-group mt-2">
+                            <label>First Name</label>
+                            <input type="text" class="form-control"
+                            placeholder="enter your first name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control"
+                            placeholder="enter your last name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Email</label>
+                            <input type="text" class="form-control"
+                            placeholder="enter your email">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Phone Number</label>
+                            <input type="text" class="form-control"
+                            placeholder="enter your Number">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Date of Birth</label>
+                            <input type="text" class="form-control"
+                            placeholder="enter ">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label>Gender</label>
+                            <select class="form-control">
+                                <option>Select Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="mt-2">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                            <button type="button" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--footer section begins-->
+    <footer class="navbar navbar-expand-lg navbar-success bg-success fixed-bottom mt-5">
+    <div class="container text-white d-flex justify-content-center">
+
+         &COPY; 2021 Green Farm Limited - All right reserved
+
+    </div>
+    </footer>
+</body>
+</html>

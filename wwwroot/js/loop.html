@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/wwwroot/css/bootstrap.css" rel="Stylesheet">
+</head>
+<body>
+     <!--navbar begins-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Home</a>
+            <button type="button" class="navbar-toggler" data-bs-target="#myNavbar" data-bs-toggle="collapse"
+            aria-expanded="false" aria-labelledby="myNavbar">
+                <span class="navbar-toggler-icon"></span></button>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link">Activity</a>
+                </div>
+                <!--dropdown section begins-->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="myDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="myDropdown">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+                 <!--dropdown section ends-->
+
+                <!--margin-left:auto-->
+                <div class="nav-item ms-auto">
+                    <a class="nav-link" href="#">Log In</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6">
+                FROM: <input type="number" id="start" placeholder="enter starting number">
+                TO: <input type="number" id="stop" placeholder="enter ending number">
+                <button type="button" onclick="countNumber()" class="btn 
+                btn-primary">Display</button>
+                <button type="button" id="btn" class="btn btn-danger" onclick="Hide()">Hide</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <label id="result">
+                <i class="bi bi-currency-dollar"></i>
+
+                <br><br>
+
+                <div class="input-group">
+                    <span class="input- group-text"><<i class="bi bi-phone"></i></span>
+                    <input type="text" class=" form-control">
+                </div>
+                
+            </label>
+        </div>
+    </div>
+
+    <script>
+
+        function countNumber(){
+            //alert(result);
+
+            let start=document.getElementById("start").value;
+            let stop=document.getElementById("stop").value;
+            
+           for(let i=start; i<=stop; i++){
+               document.getElementById("result").innerHTML+=`<br>${i}`; 
+            }
+
+            
+            //alert("Thanks for trying out my loop code.");
+        }
+        function Hide(){
+
+            if(document.getElementById("btn").innerText=="Hide"){
+                document.getElementById("result").classList.add("invisible");
+                document.getElementById("btn").innerText="Show";
+                document.getElementById("btn").classList.remove("btn-danger");
+                document.getElementById("btn").classList.add("btn-info");
+            }
+            else if(document.getElementById("btn").innerText=="Show"){
+                document.getElementById("result").classList.remove("invisible");
+                document.getElementById("btn").innerText="Hide";
+                document.getElementById("btn").classList.remove("btn-info");
+                document.getElementById("btn").classList.add("btn-danger");
+            }
+
+        }
+        
+    </script>
+    <script src="/wwwroot/js/bootstrap.bundle.js" ></script>
+</body>
+</html>
